@@ -1,0 +1,11 @@
+{% extends "pricehistory/base.html" %}
+
+{% block content %}
+  <h1>Welcome to the Price History Dashboard</h1>
+  <p>
+      <a href="{% url 'upload_invoice' %}">Upload a New Invoice</a>
+  </p>
+  <p>
+      <a href="{% url 'view_items' %}">View Item List</a>
+  </p>
+{% endblock %}

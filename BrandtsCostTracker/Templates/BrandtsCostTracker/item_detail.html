@@ -1,0 +1,18 @@
+{% extends "pricehistory/base.html" %}
+
+{% block content %}
+  <h2>Price History for {{ item.name }}</h2>
+  <p>Supplier: {{ item.supplier.name }}</p>
+  <table>
+      <tr>
+          <th>Date</th>
+          <th>Price</th>
+      </tr>
+      {% for price in price_history %}
+      <tr>
+          <td>{{ price.date }}</td>
+          <td>{{ price.price }}</td>
+      </tr>
+      {% endfor %}
+  </table>
+{% endblock %}
